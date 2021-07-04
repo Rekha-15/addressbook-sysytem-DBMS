@@ -66,4 +66,27 @@ Solution:
 	| email        | varchar(50)  | NO   |     | NULL    |                |
 	+--------------+--------------+------+-----+---------+----------------+
 	9 rows in set (0.03 sec)
+
+UC3:Ability to insert new Contacts to Address Book.
+Solution:
+	//Insert a data into table using 'INSERT' command.
+	INSERT INTO address_book(first_name, last_name, address, city , state , zip , phone_number, email) VALUES
+	('Rekha','Patil','GKW Layout', 'Bangalore', 'Kar',560058, 8095592954, 'patilrekha.1206@gmail.com'),
+	('Rahmi','Patil','RajajiNagar','Bangalore','Kar', 560057,9716277712,'rashmi123@gmail.com'),
+    	('Riya','Patil','Peenya','Bngalore', 'Kar', 560059,983734421,'riya15@gmail.com'),
+    	('Ramya','Patil','Peenya','Bangalore','kar',560059,8764727523,'ramya12@gmail.com');
+	Query OK, 4 rows affected (0.15 sec)
+	Records: 4  Duplicates: 0  Warnings: 0
+
+	//View a table in a table.
+	mysql> SELECT * FROM address_book;
+	+----+------------+-----------+----------------+--------------+---------------+--------+--------------+-------------------------+
+	| id | first_name | last_name | address        | city         | state         | zip    | phone_number | email                   |
+	+----+------------+-----------+----------------+--------------+---------------+--------+--------------+-------------------------+
+	|  1 | Rekha      | Patil     | GKW Layout     | Bangalore    | Kar           | 560058 |   8095592954 |patilrekha.1206@gmail.com|
+	|  2 | Rahmi      | Patil     | RajajiNagar    | Bangalore    | Kar           | 560057 |   9716277712 | rashmi123@gmail.com     |
+	|  3 | Riya       | Patil     | Peenya         | Bangalore    | Kar           | 560059 |   983734421  | riya15@gmail.com        |
+	|  5 | Ramya      | Patil     |Peenya          | Bangalore    | Kar           | 560059 |   8764727523 | ramya12@gmail.com       |
+	+----+------------+-----------+----------------+--------------+---------------+--------+--------------+-------------------------+
+	4 rows in set (0.00 sec)
 	
