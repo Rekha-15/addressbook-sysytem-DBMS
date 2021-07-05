@@ -67,4 +67,8 @@
        #To count the city
        SELECT city, COUNT(first_name) FROM address_book GROUP BY city;			
         
+        #UC8 // Retrive data in ascending order
+
+		#To retive data in ascending order
+        SELECT * FROM address_book WHERE city="Bangalore"  ORDER BY first_name ASC;
      
