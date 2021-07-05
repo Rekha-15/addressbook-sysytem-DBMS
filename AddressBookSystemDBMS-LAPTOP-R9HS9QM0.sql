@@ -55,4 +55,9 @@
         # Retrive the data from the table .
         SELECT * FROM address_book;
         
+        #UC6 //Retrive person belonging to specific city or state
+        
+        # Retrive the data according to state and city
+	   SELECT * FROM address_book WHERE city="Bangalore" AND state="Kar";
+        
      
