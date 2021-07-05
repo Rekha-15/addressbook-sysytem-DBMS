@@ -134,5 +134,25 @@ mysql> SELECT * FROM address_book WHERE city="Bangalore" AND state="Kar";			# Re
 	+----+------------+-----------+----------------+--------------+---------------+--------+--------------+-------------------------+
 	4 rows in set (0.00 sec)
 
+UC7 Ability to understand the size of address book by City and State
+//Count the city and state
+
+mysql> SELECT state, COUNT(first_name) FROM address_book GROUP BY state;		#To count the state
++-------+-------------------+
+| state | COUNT(first_name) |
++-------+-------------------+
+| Kar   |                 3 |
++-------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT city, COUNT(first_name) FROM address_book GROUP BY city;			#To count the city
++-----------+-------------------+
+| city      | COUNT(first_name) |
++-----------+-------------------+
+| Bangalore |                 2 |
+| Mangalore |                 1 |
++-----------+-------------------+
+2 rows in set (0.00 sec)
+
 
 	

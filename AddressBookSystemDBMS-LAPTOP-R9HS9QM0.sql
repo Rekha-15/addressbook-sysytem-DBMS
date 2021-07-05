@@ -59,5 +59,12 @@
         
         # Retrive the data according to state and city
 	   SELECT * FROM address_book WHERE city="Bangalore" AND state="Kar";
+       
+       #UC7 //Count the city and state
+       
+       #To count the state
+       SELECT state, COUNT(first_name) FROM address_book GROUP BY state;
+       #To count the city
+       SELECT city, COUNT(first_name) FROM address_book GROUP BY city;			
         
      
