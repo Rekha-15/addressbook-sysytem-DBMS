@@ -82,5 +82,9 @@
 	   UPDATE address_book SET addressbook_type="family" WHERE first_name="Rekha";
         UPDATE address_book SET addressbook_type="friend" WHERE first_name="Riya";	
         select * from address_book;
+        
+        #UC10 // COUNT by type
+        # Here i use count to count the each type using group by clause.
+        SELECT first_name,addressbook_type,COUNT(addressbook_type) FROM address_book GROUP BY first_name;		
        
      

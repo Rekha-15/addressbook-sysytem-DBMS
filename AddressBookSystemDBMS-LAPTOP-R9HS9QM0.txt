@@ -187,3 +187,15 @@ mysql> select * from address_book;
 	+----+------------+-----------+----------------+--------------+---------------+--------+--------------+-------------------------+------------------+
 	4 rows in set (0.00 sec)
 	
+UC10 // COUNT by type
+# Here i use count to count the each type using group by clause.
+mysql> SELECT first_name,type,COUNT(type) FROM address_book GROUP BY first_name;		
+
++------------+------------+-------------+
+| first_name | type       | COUNT(type) |
++------------+------------+-------------+
+| Rekha      | family     |           1 |
+| Rahmi      | family     |           1 |
+| Riya       | friend     |           1 |
++------------+------------+-------------+
+3 rows in set (0.00 sec)
