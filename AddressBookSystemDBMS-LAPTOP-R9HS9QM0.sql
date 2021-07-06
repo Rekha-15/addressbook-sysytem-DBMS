@@ -71,4 +71,16 @@
 
 		#To retive data in ascending order
         SELECT * FROM address_book WHERE city="Bangalore"  ORDER BY first_name ASC;
+        
+        #UC9 // ALTER Address Book table with name and Type
+        
+	   # Alter is use to add one feild name as addressbook_type.
+       alter table address_book add addressbook_type varchar(150);	
+       select * from address_book;
+       # Updating the table by adding the value into the addressbook_type feild using name.
+       UPDATE address_book SET addressbook_type="family" WHERE first_name="Rahmi";
+	   UPDATE address_book SET addressbook_type="family" WHERE first_name="Rekha";
+        UPDATE address_book SET addressbook_type="friend" WHERE first_name="Riya";	
+        select * from address_book;
+       
      

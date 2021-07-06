@@ -164,4 +164,26 @@ mysql> SELECT * FROM address_book WHERE city="Bangalore"  ORDER BY first_name AS
 	|  2 | Rekha      | Patil     | GKW Layout     | Bangalore    | Kar           | 560058 |   8095592954 | patilrekha.1206@gmail.com|        
 	+----+------------+-----------+----------------+--------------+---------------+--------+--------------+--------------------------+
 	4 rows in set (0.00 sec)
+UC9 // ALTER table add cloumn type
+
+mysql> alter table address_book add addressbook_type varchar(50);	# Alter is use to add one feild name as type.
+# Updating the table by adding the value into the type feild using name.
+mysql> UPDATE address_book SET addressbook_type="family" WHERE first_name="Rahmi"; 
+mysql> UPDATE address_book SET addressbook_type="family" WHERE first_name="Rekha";
+Query OK, 1 row affected (0.12 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE address_book SET addressbook_type="friend" WHERE first_name="Riya";
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+# To display the table.	
+mysql> select * from address_book;						 
+        +----+------------+-----------+----------------+--------------+---------------+--------+--------------+-------------------------+------------------+
+	| id | first_name | last_name | address        | city         | state         | zip    | phone_number | email                   | addressbook_type |
+	+----+------------+-----------+----------------+--------------+---------------+--------+--------------+-------------------------+------------------+
+	|  1 | Rekha      | Patil     | GKW Layout     | Bangalore    | Kar           | 560058 |   8095592954 |patilrekha.1206@gmail.com| family           |
+	|  2 | Rahmi      | Patil     | RajajiNagar    | Bangalore    | Kar           | 560057 |   9716277712 | rashmi123@gmail.com     | family           |
+	|  3 | Riya       | Patil     | Peenya         | Mangalore    | Kar           | 560059 |   983734421  | riya15@gmail.com        | friend           |
+	+----+------------+-----------+----------------+--------------+---------------+--------+--------------+-------------------------+------------------+
+	4 rows in set (0.00 sec)
 	
